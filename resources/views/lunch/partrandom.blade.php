@@ -1,0 +1,28 @@
+<h2>午餐吃啥</h2>
+
+<form action="/PartRandom" method="POST">
+{{csrf_field()}}
+    <table>
+        <tr>
+            <td>
+                今天要吃的是：
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{$data->StoreName}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="隨機產生">
+            </td>
+        </tr>
+    </table>
+    @empty($checkdata)
+        @else
+            @foreach($checkdata as $checkdatabu)
+                <input type="hidden" name="checkdata[]" value="{{$checkdatabu}}">
+            @endforeach
+    @endempty
+</form>
