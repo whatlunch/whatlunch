@@ -29,6 +29,14 @@
         </tr>
         <tr>
             <td>
+                資訊
+            </td>
+            <td>
+                <input type="text" name="information">
+            </td>
+        </tr>
+        <tr>
+            <td>
                 <input type="submit" value="新增商品">
             </td>
         </tr>

@@ -22,10 +22,16 @@
         @foreach($alldata as $data)
             <tr>
                 <td>
-                    {{$data->StoreName}}
+                    <a href="/Information?StoreName={{$data->StoreName}}">{{$data->StoreName}}</a>
                 </td>
                 <td>
                     <input type="checkbox" name="checkdata[]" value="{{$data->StoreName}}" checked>
+                </td>
+                <td>
+                    <a href="/Edit?S_id={{$data->S_id}}">修改</a>
+                </td>
+                <td>
+                    <a href="/Delete?S_id={{$data->S_id}}">刪除</a>
                 </td>
             </tr>
         @endforeach

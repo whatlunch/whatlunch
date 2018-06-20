@@ -26,5 +26,14 @@ class lunchService
         return $lunch;
     }
 
+    public function Edit($id)
+    {
+        $lunch=Lunch::where('S_id','=',$id)->get();
+        return $lunch;
+    }
 
+    public function Delete($id)
+    {
+        Lunch::where('S_id','=',$id)->delete();
+    }
 }
